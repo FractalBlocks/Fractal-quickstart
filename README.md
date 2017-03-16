@@ -11,4 +11,4 @@ So you are here, this how you can use this repo:
 - type `npm run dev` and visit [http://localhost:3000](http://localhost:3000) in your browser
 - lets hack it!
 
-Finally when you have some work done, type `npm run compile` and your app shpuld appear at the dist/ folder, this is it.
+Finally when you have some work done, type `npm run compile` and hit enter and your app should appear at the dist/ folder. This is it.

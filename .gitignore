@@ -1,6 +1,5 @@
 # Project specific stuff
-bundle/
-lib/
+dist/
 coverage/
 reports/
 webpack-stats.json
