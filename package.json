@@ -1,0 +1,32 @@
+{
+  "name": "fractal-quickstart",
+  "version": "0.0.1",
+  "description": "Fractal quickstart proyect",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
+    "compile": "webpack --config config/webpack-prod.config.js --hot --inline --port 3000 --entry ./app/index.ts dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fractalPlatform/Fractal-quickstart.git"
+  },
+  "author": "Carlos Galarza <carloslfu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fractalPlatform/Fractal-quickstart/issues"
+  },
+  "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
+  "dependencies": {
+    "fractal-core": "0.0.8",
+    "snabbdom": "^0.6.7"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "html-webpack-plugin": "^2.28.0",
+    "source-map-loader": "^0.2.0",
+    "typescript": "^2.3.0-dev.20170315",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
