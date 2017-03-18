@@ -19,8 +19,8 @@ const app = run({
 
 // Hot reload - DEV ONLY
 if (module.hot) {
-  module.hot.accept('./app', () => {
-    let m = (<any> require('./app')).default
+  module.hot.accept('./root', () => {
+    let m = (<any> require('./root')).default
     app.moduleAPI.reattach(m, mergeStates)
   })
 }
