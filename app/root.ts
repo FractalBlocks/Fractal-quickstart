@@ -2,7 +2,7 @@ import { Component, ev } from 'fractal-core'
 import { StyleGroup, absoluteCenter } from 'fractal-core/utils/style'
 import h from 'snabbdom/h'
 
-const name = 'Main'
+const name = 'Root'
 
 const state = false
 
