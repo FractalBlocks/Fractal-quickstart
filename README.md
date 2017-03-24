@@ -33,7 +33,9 @@ We believe in that well crafted apps have good quality and should have 100% cove
 
 ## E2E testing
 
-We recomend to have e2e tests for each acceptance criteria (of a user story). E2e test always shoul import the module, e.g. `app/index.ts` as a start point
+We recomend to have e2e tests for each acceptance criteria (of a user story). E2e test always shoul import the module, e.g. `app/index.ts` as a start point. Here some tips:
+
+- The e2e tests always should assert that there are no warning and errors via logs
 
 ## Unit testing
 
