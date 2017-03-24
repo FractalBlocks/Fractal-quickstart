@@ -1,7 +1,7 @@
 {
   "name": "fractal-quickstart",
-  "version": "0.0.2",
-  "description": "Fractal quickstart proyect",
+  "version": "0.1.0",
+  "description": "Fractal quickstart project",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^0.2.3",
+    "fractal-core": "^0.2.5",
     "snabbdom": "^0.6.7"
   },
   "devDependencies": {

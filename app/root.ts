@@ -1,20 +1,21 @@
-import { Component, ev } from 'fractal-core'
+import { Component, ev, Actions, Inputs } from 'fractal-core'
 import { StyleGroup, absoluteCenter } from 'fractal-core/utils/style'
+import { View } from 'fractal-core/interfaces/view'
 import h from 'snabbdom/h'
 
 const name = 'Root'
 
 const state = false
 
-const inputs = ctx => ({
+const inputs: Inputs = ctx => ({
   toggle: () => actions.Toggle(),
 })
 
-const actions = {
+const actions: Actions = {
   Toggle: () => s => !s,
 }
 
-const view = (ctx, state) => {
+const view: View = (ctx, state) => {
   let style = ctx.groups.style
   return h('div', {
     key: ctx.name,
