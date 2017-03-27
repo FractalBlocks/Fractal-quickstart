@@ -1,12 +1,13 @@
 {
   "name": "fractal-quickstart",
-  "version": "0.1.0",
-  "description": "Fractal quickstart project",
+  "version": "0.1.1",
+  "description": "Fractal quickstart project, start with the best practices right now!!",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "test:watch": "karma start --no-single-run --auto-watch",
-    "dev": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
+      "posttest": "codecov -f coverage/*.json",
+    "start": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
     "compile": "webpack --config config/webpack-prod.config.js --entry ./app/index.ts"
   },
   "repository": {
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^0.2.5",
+    "fractal-core": "^0.3.0",
     "snabbdom": "^0.6.7"
   },
   "devDependencies": {

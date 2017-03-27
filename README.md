@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/FractalBlocks/Fractal-quickstart/branch/master/graph/badge.svg)](https://codecov.io/gh/FractalBlocks/Fractal-quickstart)
+[![Build Status](https://travis-ci.org/FractalBlocks/Fractal-quickstart.svg?branch=master)](https://travis-ci.org/FractalBlocks/Fractal-quickstart)
+[![Join the chat at https://gitter.im/Fractal-core/Lobby](https://badges.gitter.im/Fractal-core/Lobby.svg)]
 # Fractal-quickstart
 
 So you are here, this how you can use this repo:
@@ -8,7 +11,7 @@ So you are here, this how you can use this repo:
 - be sure you have [Node.js](https://nodejs.org/en/) installed
 - open a command window
 - type `npm i` and hit enter
-- type `npm run dev` and visit [http://localhost:3000](http://localhost:3000) in your browser
+- type `npm start` and visit [http://localhost:3000](http://localhost:3000) in your browser
 - lets hack it! :heart:
 
 Finally when you have some work done, type `npm run compile` and hit enter and your app should appear at the dist/ folder. This is it.
