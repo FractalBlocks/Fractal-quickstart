@@ -47,5 +47,3 @@ We recomend to have unit tests for each component in a file called `componentNam
 ## TODOs
 
 - Add e2e test for the unique acceptance criteria
-- Integrate TravisCI
-- Integrate Codecov
