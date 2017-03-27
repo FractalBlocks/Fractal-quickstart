@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start",
     "test:watch": "karma start --no-single-run --auto-watch",
-      "posttest": "codecov -f coverage/*.json",
+    "posttest": "codecov -f coverage/*.json",
     "start": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
     "compile": "webpack --config config/webpack-prod.config.js --entry ./app/index.ts"
   },
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
+    "codecov": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine": "^2.5.3",
