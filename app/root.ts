@@ -7,15 +7,17 @@ const name = 'Root'
 
 const state = false
 
-const inputs: Inputs = ctx => ({
+export type S = boolean
+
+const inputs: Inputs<S> = ctx => ({
   toggle: () => actions.Toggle(),
 })
 
-const actions: Actions = {
+const actions: Actions<S> = {
   Toggle: () => s => !s,
 }
 
-const view: View = (ctx, state) => {
+const view: View<S> = (ctx, state) => {
   let style = ctx.groups.style
   return h('div', {
     key: ctx.name,
@@ -67,7 +69,7 @@ const style: StyleGroup = {
   },
 }
 
-const comp: Component = {
+const comp: Component<S> = {
   name,
   groups: {
     style,
