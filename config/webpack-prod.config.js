@@ -56,7 +56,7 @@ module.exports = function (options) {
 
     },
     output: {
-        path: 'dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
 

@@ -19,6 +19,7 @@ const actions: Actions<S> = {
 
 const view: View<S> = (ctx, state) => {
   let style = ctx.groups.style
+
   return h('div', {
     key: ctx.name,
     class: { [style.base]: true },
