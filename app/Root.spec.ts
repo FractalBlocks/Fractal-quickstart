@@ -2,7 +2,7 @@ import { run, Module } from 'fractal-core'
 import { styleHandler } from 'fractal-core/groups/style'
 import { VNode } from 'snabbdom/vnode'
 
-import Root from './root'
+import * as Root from './Root'
 
 describe('Root component', () => {
 

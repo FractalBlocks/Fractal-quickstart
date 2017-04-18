@@ -3,7 +3,7 @@ import { viewHandler } from 'fractal-core/interfaces/view'
 import { styleHandler } from 'fractal-core/groups/style'
 import { mergeStates } from 'fractal-core/utils/reattach' // DEV
 import { logFns } from 'fractal-core/utils/log' // DEV
-import root from './root'
+import * as root from './Root'
 
 declare const ENV: any
 
@@ -22,8 +22,8 @@ const app = run({
 
 // Hot reload - DEV ONLY
 if (module.hot) {
-  module.hot.accept('./root', () => {
-    let m = (<any> require('./root')).default
+  module.hot.accept('./Root', () => {
+    let m = <any> require('./Root')
     app.moduleAPI.reattach(m, mergeStates)
   })
 }

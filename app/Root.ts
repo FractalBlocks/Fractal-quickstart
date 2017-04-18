@@ -1,19 +1,19 @@
-import { Component, ev, Actions, Inputs } from 'fractal-core'
+import { Actions, Inputs, ev } from 'fractal-core'
 import { StyleGroup, absoluteCenter } from 'fractal-core/utils/style'
 import { View } from 'fractal-core/interfaces/view'
 import h from 'snabbdom/h'
 
-const name = 'Root'
+export const name = 'Root'
 
-const state = false
+export const state = false
 
 export type S = boolean
 
-const inputs: Inputs<S> = ctx => ({
+export const inputs: Inputs<S> = ctx => ({
   toggle: () => actions.Toggle(),
 })
 
-const actions: Actions<S> = {
+export const actions: Actions<S> = {
   Toggle: () => s => !s,
 }
 
@@ -35,6 +35,8 @@ const view: View<S> = (ctx, state) => {
     }, state ? 'nice!! :\')' : 'Click me!!'),
   ])
 }
+
+export const interfaces = { view }
 
 const style: StyleGroup = {
   base: {
@@ -70,17 +72,4 @@ const style: StyleGroup = {
   },
 }
 
-const comp: Component<S> = {
-  name,
-  groups: {
-    style,
-  },
-  state,
-  inputs,
-  actions,
-  interfaces: {
-    view,
-  },
-}
-
-export default comp
+export const groups = { style }
