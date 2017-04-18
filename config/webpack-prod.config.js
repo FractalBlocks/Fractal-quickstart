@@ -13,6 +13,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin')
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin')
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 /**
  * Webpack Constants
@@ -169,6 +170,10 @@ module.exports = function (options) {
           'HMR': false,
         }
       }),
+      new CopyWebpackPlugin([
+        { from: 'assets', to: 'assets' },
+        { from: 'fonts', to: 'fonts' },
+      ]),
       new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
         template: 'app/index.ejs',
