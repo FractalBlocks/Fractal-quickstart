@@ -1,8 +1,8 @@
 import { run } from 'fractal-core'
 import { viewHandler } from 'fractal-core/interfaces/view'
 import { styleHandler } from 'fractal-core/groups/style'
-import { mergeStates } from 'fractal-core/utils/reattach' // DEV
-import { logFns } from 'fractal-core/utils/log' // DEV
+import { mergeStates } from 'fractal-core/reattach' // DEV
+import { logFns } from 'fractal-core/log' // DEV
 import * as root from './Root'
 
 declare const ENV: any

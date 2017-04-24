@@ -1,5 +1,5 @@
-import { Actions, Inputs, ev } from 'fractal-core'
-import { StyleGroup, absoluteCenter } from 'fractal-core/utils/style'
+import { Actions, Inputs, Interfaces, ev } from 'fractal-core'
+import { StyleGroup, absoluteCenter } from 'fractal-core/style'
 import { View } from 'fractal-core/interfaces/view'
 import h from 'snabbdom/h'
 
@@ -36,7 +36,7 @@ const view: View<S> = (ctx, state) => {
   ])
 }
 
-export const interfaces = { view }
+export const interfaces: Interfaces = { view }
 
 const style: StyleGroup = {
   base: {
