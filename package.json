@@ -44,6 +44,7 @@
     "style-loader": "^0.16.1",
     "ts-helpers": "^1.1.2",
     "typescript": "^2.3.0-dev.20170315",
+    "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   }
