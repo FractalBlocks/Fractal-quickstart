@@ -1,3 +1,4 @@
+import './styles.css'
 import { run } from 'fractal-core'
 import { viewHandler } from 'fractal-core/interfaces/view'
 import { styleHandler } from 'fractal-core/groups/style'
