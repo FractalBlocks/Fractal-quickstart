@@ -138,7 +138,7 @@ module.exports = function (options) {
          */
         {
           test: /\.css$/,
-          loaders: ['css-loader']
+          loaders: [ 'style-loader', 'css-loader' ]
         },
 
       ]
