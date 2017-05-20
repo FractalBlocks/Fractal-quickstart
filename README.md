@@ -16,6 +16,8 @@ So you are here, this how you can use this repo:
 
 Finally when you have some work done, type `npm run compile` and hit enter and your app should appear at the dist/ folder. This is it.
 
+Follow our [tutorial here](https://github.com/FractalBlocks/Fractal/blob/master/docs/tutorial-basics.md).
+
 ## Test and coverage included
 
 Run `npm test` to run test and coverage tasks, and `npm run test:watch` if you are develping for testing every time you make a change.
