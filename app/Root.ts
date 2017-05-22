@@ -1,7 +1,6 @@
 import { Actions, Inputs, Interfaces, ev } from 'fractal-core'
 import { StyleGroup, absoluteCenter } from 'fractal-core/style'
-import { View } from 'fractal-core/interfaces/view'
-import h from 'snabbdom/h'
+import { View, h } from 'fractal-core/interfaces/view'
 
 export const name = 'Root'
 

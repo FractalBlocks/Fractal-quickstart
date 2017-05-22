@@ -1,6 +1,6 @@
 import { run, Module } from 'fractal-core'
 import { styleHandler } from 'fractal-core/groups/style'
-import { VNode } from 'snabbdom/vnode'
+import { VNode } from 'fractal-core/interfaces/view'
 
 import * as Root from './Root'
 
