@@ -1,5 +1,10 @@
-import { Actions, Inputs, Interfaces } from 'fractal-core'
-import { StyleGroup, absoluteCenter } from 'fractal-core/style'
+import {
+  Actions,
+  Inputs,
+  Interfaces,
+  StyleGroup,
+  absoluteCenter,
+} from 'fractal-core'
 import { View, h } from 'fractal-core/interfaces/view'
 
 export const name = 'Root'
