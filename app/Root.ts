@@ -1,4 +1,4 @@
-import { Actions, Inputs, Interfaces, ev } from 'fractal-core'
+import { Actions, Inputs, Interfaces } from 'fractal-core'
 import { StyleGroup, absoluteCenter } from 'fractal-core/style'
 import { View, h } from 'fractal-core/interfaces/view'
 
@@ -8,7 +8,7 @@ export const state = false
 
 export type S = boolean
 
-export const inputs: Inputs<S> = ctx => ({
+export const inputs: Inputs<S> = ({ ctx }) => ({
   toggle: () => actions.Toggle(),
 })
 
@@ -16,7 +16,7 @@ export const actions: Actions<S> = {
   Toggle: () => s => !s,
 }
 
-const view: View<S> = (ctx, state) => {
+const view: View<S> = ({ ctx, ev }) => s => {
   let style = ctx.groups.style
 
   return h('div', {
@@ -26,12 +26,12 @@ const view: View<S> = (ctx, state) => {
     h('div', {
       class: {
         [style.button]: true,
-        [style.buttonActive]: state,
+        [style.buttonActive]: s,
       },
       on: {
-        click: ev(ctx, 'toggle'),
+        click: ev('toggle'),
       },
-    }, state ? 'nice!! :\')' : 'Click me!!'),
+    }, s ? 'nice!! :\')' : 'Click me!!'),
   ])
 }
 

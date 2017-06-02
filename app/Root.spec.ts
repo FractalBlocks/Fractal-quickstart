@@ -1,4 +1,4 @@
-import { run, Module } from 'fractal-core'
+import { run, Module, computeEvent, InputData } from 'fractal-core'
 import { styleHandler } from 'fractal-core/groups/style'
 import { VNode } from 'fractal-core/interfaces/view'
 
@@ -60,7 +60,7 @@ describe('Root component', () => {
           view = newView
         })
         // perform a click over the button
-        app.moduleAPI.dispatch((<VNode> view.children[0]).data.on.click)
+        app.moduleAPI.dispatch(computeEvent({}, <InputData> (<VNode> view.children[0]).data.on.click))
       })
 
     })

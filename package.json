@@ -20,7 +20,9 @@
     "url": "https://github.com/fractalPlatform/Fractal-quickstart/issues"
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
-  "dependencies": {},
+  "dependencies": {
+    "fractal-core": "^2.0.2"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
     "codecov": "^2.1.0",
