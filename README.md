@@ -5,7 +5,7 @@
 
 So you are here, this how you can use this repo:
 
-- download this repo
+- [download this repo](https://github.com/FractalBlocks/Fractal-quickstart/archive/master.zip)
 - uncompress the downloaded file
 - open the folder
 - be sure you have [Node.js](https://nodejs.org/en/) installed
