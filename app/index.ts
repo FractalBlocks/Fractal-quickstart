@@ -14,21 +14,23 @@ declare const ENV: any
 
 let DEV = ENV === 'development'
 
-const app = run({
-  root,
-  groups: {
-    style: styleHandler('', DEV),
-  },
-  interfaces: {
-    view: viewHandler('#app'),
-  },
-  ...DEV ? logFns : {},
-})
-
-// Hot reload - DEV ONLY
-if (module.hot) {
-  module.hot.accept('./Root', () => {
-    let m = <any> require('./Root')
-    app.moduleAPI.reattach(m, mergeStates)
+;(async () => {
+  const app = await run({
+    root,
+    groups: {
+      style: styleHandler('', DEV),
+    },
+    interfaces: {
+      view: viewHandler('#app'),
+    },
+    ...DEV ? logFns : {},
   })
-}
+
+  // Hot reload - DEV ONLY
+  if (module.hot) {
+    module.hot.accept('./Root', () => {
+      let m = <any> require('./Root')
+      app.moduleAPI.reattach(m, mergeStates)
+    })
+  }
+})()

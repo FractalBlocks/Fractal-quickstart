@@ -14,7 +14,7 @@ export const state = false
 export type S = boolean
 
 export const inputs: Inputs<S> = ({ ctx }) => ({
-  toggle: () => actions.Toggle(),
+  toggle: async () => actions.Toggle(),
 })
 
 export const actions: Actions<S> = {

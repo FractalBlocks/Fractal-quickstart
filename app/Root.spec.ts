@@ -24,7 +24,7 @@ describe('Root component', () => {
 
   })
 
-  function testView (cb: {(value: VNode): void}): Module {
+  function testView (cb: {(value: VNode): Promise<void>}): Promise<Module> {
     return run({
       root: Root,
       groups: {
@@ -44,9 +44,9 @@ describe('Root component', () => {
 
     describe('toggle', () => {
 
-      it('should toogle the button text', done => {
+      it('should toogle the button text', async (done) => {
         let view: VNode
-        let app = testView(newView => {
+        let app = await testView(async newView => {
           if (!view) {
             let expected = 'Click me!!'
             let actual = (<VNode> newView.children[0]).text
