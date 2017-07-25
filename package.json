@@ -1,6 +1,6 @@
 {
   "name": "fractal-quickstart",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Fractal quickstart project, start with the best practices right now! and have fun",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test:watch": "karma start --no-single-run --auto-watch",
     "posttest": "codecov -f coverage/*.json",
     "start": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
-    "compile": "webpack --config config/webpack-prod.config.js --entry ./app/index.ts"
+    "compile": "webpack --config config/webpack-prod.config.js --entry ./app/index.ts",
+    "bundle-icons": "svg-join -s assets/icons/*.svg -o assets -n icons-bundle && svgo --config=svgo.yml assets/icons-bundle.svg assets/icons-bundle.min.svg"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^3.0.0"
+    "fractal-core": "^3.0.2"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
@@ -41,6 +42,8 @@
     "karma-webpack": "^2.0.3",
     "source-map-loader": "^0.2.0",
     "style-loader": "^0.16.1",
+    "svg-join": "^1.1.1",
+    "svgo": "^0.7.2",
     "ts-helpers": "^1.1.2",
     "typescript": "^2.3.0-dev.20170315",
     "url-loader": "^0.5.8",

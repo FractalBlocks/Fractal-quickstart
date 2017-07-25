@@ -1,13 +1,9 @@
+import '../assets/icons-bundle.css'
 import './styles.css'
 import {
-  run,
-  // DEV
-  logFns,
   mergeStates,
 } from 'fractal-core'
-import { viewHandler } from 'fractal-core/interfaces/view'
-import { styleHandler } from 'fractal-core/groups/style'
-
+import { runModule } from './module'
 import * as root from './Root'
 
 declare const ENV: any
@@ -15,16 +11,7 @@ declare const ENV: any
 let DEV = ENV === 'development'
 
 ;(async () => {
-  const app = await run({
-    root,
-    groups: {
-      style: styleHandler('', DEV),
-    },
-    interfaces: {
-      view: viewHandler('#app'),
-    },
-    ...DEV ? logFns : {},
-  })
+    const app = await runModule(root, DEV)
 
   // Hot reload - DEV ONLY
   if (module.hot) {
