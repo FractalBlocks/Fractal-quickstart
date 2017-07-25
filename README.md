@@ -18,6 +18,17 @@ Finally when you have some work done, type `npm run compile` and hit enter and y
 
 Follow our [tutorial here](https://github.com/FractalBlocks/Fractal/blob/master/docs/tutorial/readme.md).
 
+## SVG icons bundling included
+
+All icons are in assets/icons and are svg files with dash separated words. If you add some icon you should run `npm run bundle-icons` that use svg-join + svgo to bundle and optimize all icons into assets/icons-bundle.min.svg. Before that, you can use this icons with:
+
+```html
+<link rel="stylesheet" type="text/css" href="assets/icons-bundle.css" />
+...
+<svg class="svg_my-svg-file"><use xlink:href="icons-bundle.min.svg#my-svg-file"></svg>
+<svg class="svg_my-svg-file2"><use xlink:href="icons-bundle.min.svg#my-svg-file2"></svg>
+``
+
 ## Test and coverage included
 
 Run `npm test` to run test and coverage tasks, and `npm run test:watch` if you are develping for testing every time you make a change.

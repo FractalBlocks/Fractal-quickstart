@@ -4,6 +4,10 @@ coverage/
 reports/
 webpack-stats.json
 
+icons-bundle.css
+icons-bundle.svg
+icons-bundle.min.svg
+
 # npm stuff
 node_modules/
 npm-debug.log
