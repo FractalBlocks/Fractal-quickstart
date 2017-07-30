@@ -29,6 +29,10 @@ All icons are in assets/icons and are svg files with dash separated words. If yo
 <svg class="svg_my-svg-file2"><use xlink:href="icons-bundle.min.svg#my-svg-file2"></svg>
 ```
 
+## Development environment
+
+We strongly recommend [Visual Studio Code](https://code.visualstudio.com/) and use [fractal-vscode-extension](https://marketplace.visualstudio.com/items?itemName=carloslfu.fractal-vscode-extension) that provide many useful code snippets
+
 ## Test and coverage included
 
 Run `npm test` to run test and coverage tasks, and `npm run test:watch` if you are develping for testing every time you make a change.
