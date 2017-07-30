@@ -27,7 +27,7 @@ All icons are in assets/icons and are svg files with dash separated words. If yo
 ...
 <svg class="svg_my-svg-file"><use xlink:href="icons-bundle.min.svg#my-svg-file"></svg>
 <svg class="svg_my-svg-file2"><use xlink:href="icons-bundle.min.svg#my-svg-file2"></svg>
-``
+```
 
 ## Test and coverage included
 
