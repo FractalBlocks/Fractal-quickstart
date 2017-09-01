@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^3.0.7"
+    "fractal-core": "^3.2.0"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
