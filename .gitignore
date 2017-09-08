@@ -1,5 +1,7 @@
 # Project specific stuff
 dist/
+.fusebox
+
 coverage/
 reports/
 webpack-stats.json

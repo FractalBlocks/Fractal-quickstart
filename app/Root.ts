@@ -58,7 +58,7 @@ const style: StyleGroup = {
     color: 'white',
     backgroundColor: '#13A513',
     textAlign: 'center',
-    transition: 'transform 0.4s',
+    transition: 'transform .4s, background .2s',
     cursor: 'pointer',
     userSelect: 'none',
     ...<any> absoluteCenter,

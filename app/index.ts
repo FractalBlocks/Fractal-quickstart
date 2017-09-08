@@ -1,23 +1,11 @@
-import '../assets/icons-bundle.css'
+import './hmr'
+import './assets/icons-bundle.css'
 import './styles.css'
-import {
-  mergeStates,
-} from 'fractal-core'
 import { runModule } from './module'
 import * as root from './Root'
 
-declare const ENV: any
-
-let DEV = ENV === 'development'
+let DEV = !process.env.isProduction
 
 ;(async () => {
-    const app = await runModule(root, DEV)
-
-  // Hot reload - DEV ONLY
-  if (module.hot) {
-    module.hot.accept('./Root', () => {
-      let m = <any> require('./Root')
-      app.moduleAPI.reattach(m, mergeStates)
-    })
-  }
+  ;(window as any).app = await runModule(root, DEV)
 })()
