@@ -41,7 +41,7 @@ Sparky.task('config', () => {
 })
 
 Sparky.task('default', ['clean', 'config'], () => {
-  fuse.dev()
+  fuse.dev({ port: 3000 })
   // add dev instructions
   app.watch().hmr()
   return fuse.run()
@@ -51,6 +51,6 @@ Sparky.task('clean', () => Sparky.src('dist/').clean('dist/'))
 Sparky.task('prod-env', ['clean'], () => { isProduction = true })
 Sparky.task('dist', ['prod-env', 'config'], () => {
   // comment out to prevent dev server from running (left for the demo)
-  fuse.dev()
+  fuse.dev({ port: 3000 })
   return fuse.run()
 })
