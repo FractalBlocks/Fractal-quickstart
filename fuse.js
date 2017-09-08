@@ -13,24 +13,25 @@ let fuse, app, vendor, isProduction
 
 Sparky.task('config', () => {
   fuse = new FuseBox({
-      homeDir: 'app/',
-      sourceMaps: !isProduction,
-      hash: isProduction,
-      output: 'dist/$name.js',
-      useTypescriptCompiler: true,
-      experimentalFeatures: true,
-      plugins: [
-          SVGPlugin(),
-          CSSPlugin(),
-          EnvPlugin({ isProduction }),
-          WebIndexPlugin({
-              template: 'app/index.html'
-          }),
-          isProduction && QuantumPlugin({
-              treeshake: true,
-              uglify: true
-          })
-      ]
+    homeDir: 'app/',
+    sourceMaps: !isProduction,
+    hash: isProduction,
+    output: 'dist/$name.js',
+    useTypescriptCompiler: true,
+    experimentalFeatures: true,
+    plugins: [
+      SVGPlugin(),
+      CSSPlugin(),
+      EnvPlugin({ isProduction }),
+      WebIndexPlugin({
+        path: '.',
+        template: 'app/index.html'
+      }),
+      isProduction && QuantumPlugin({
+        treeshake: true,
+        uglify: true
+      })
+    ]
   })
   // vendor
   vendor = fuse.bundle('vendor').instructions('~ index.ts')

@@ -3,6 +3,8 @@
 [![Join the chat at https://gitter.im/Fractal-core/Lobby](https://badges.gitter.im/Fractal-core/Lobby.svg)](https://gitter.im/Fractal-core/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 # Fractal-quickstart
 
+Quistart project for Fractal framework, now we use :fire:[FuseBox](https://github.com/fuse-box/fuse-box):fire:! as bundle/loader system, which allows a blazingly fast develelopment and production building
+
 So you are here, this how you can use this repo:
 
 - [download this repo](https://github.com/FractalBlocks/Fractal-quickstart/archive/master.zip)
@@ -33,13 +35,13 @@ All icons are in assets/icons and are svg files with dash separated words. If yo
 
 We strongly recommend [Visual Studio Code](https://code.visualstudio.com/) and use [fractal-vscode-extension](https://marketplace.visualstudio.com/items?itemName=carloslfu.fractal-vscode-extension) that provide many useful code snippets
 
-## Test and coverage included
+## Test and coverage included (Broken for now ... Comming soon)
 
 Run `npm test` to run test and coverage tasks, and `npm run test:watch` if you are develping for testing every time you make a change.
 
 In FractalBlocks we love quality for this reason the minimum coverage is 100%, we encourage you to do the same
 
-## Testing
+## Testing (Broken for now ... Comming soon)
 
 We believe in that well crafted apps have good quality and should have 100% coverage. Here some tips for writing good tests:
 
