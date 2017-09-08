@@ -11,6 +11,8 @@ const customizedHMRPlugin = {
         if (FuseBox.mainFile && data.path === 'Root.js') {
           let m = FuseBox.import('./Root')
           ;(window as any).app.moduleAPI.reattach(m, mergeStates)
+        } else {
+          FuseBox.import(FuseBox.mainFile)
         }
         return true
     }
