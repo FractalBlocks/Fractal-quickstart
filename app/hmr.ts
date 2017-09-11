@@ -1,4 +1,3 @@
-// TODO: put this file in Fractal core
 import {
   mergeStates,
 } from 'fractal-core'
@@ -12,10 +11,11 @@ if (!process.env.isProduction) {
       if (data.type === 'js') {
           FuseBox.flush()
           FuseBox.dynamic(data.path, data.content)
-          if (FuseBox.mainFile && data.path === 'Root.js') {
-            let m = FuseBox.import('./Root')
-            ;(window as any).app.moduleAPI.reattach(m, mergeStates)
-          } else {
+          let newMod = FuseBox.import(data.path)
+          if (FuseBox.mainFile && newMod.name && newMod.hasOwnProperty('state') && newMod.interfaces) {
+            let Root = FuseBox.import('./Root')
+            ;(window as any).app.moduleAPI.reattach(Root, mergeStates)
+          } else if (FuseBox.mainFile) {
             FuseBox.import(FuseBox.mainFile)
           }
           return true
@@ -29,3 +29,4 @@ if (!process.env.isProduction) {
   }
 
 }
+
