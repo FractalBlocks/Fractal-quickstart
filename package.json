@@ -7,8 +7,8 @@
     "test": "karma start",
     "test:watch": "karma start --no-single-run --auto-watch",
     "posttest": "codecov -f coverage/*.json",
-    "start": "webpack-dev-server --config config/webpack-dev.config.js --hot --inline --port 3000 --entry ./app/index.ts",
-    "compile": "webpack --config config/webpack-prod.config.js --entry ./app/index.ts",
+    "start": "node fuse",
+    "compile": "node fuse dist",
     "bundle-icons": "svg-join -s assets/icons/*.svg -o assets -n icons-bundle && svgo --config=svgo.yml assets/icons-bundle.svg assets/icons-bundle.min.svg"
   },
   "repository": {
