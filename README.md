@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/Fractal-core/Lobby](https://badges.gitter.im/Fractal-core/Lobby.svg)](https://gitter.im/Fractal-core/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 # Fractal-quickstart
 
-Quickstart project for Fractal framework. Now we use :fire:[FuseBox](https://github.com/fuse-box/fuse-box):fire:! as bundle/loader system, which allows a blazingly fast develelopment and production building
+Super simple quickstart project for Fractal framework. Now we use :fire:[FuseBox](https://github.com/fuse-box/fuse-box):fire:! as bundle/loader system, which allows a blazingly fast develelopment and production building. All this offer a super simple development and production environment, you can count de dev + prod dependencies of this repo in one hand!! there are only 4, see package.json
 
 So you are here, this how you can use this repo:
 
@@ -35,34 +35,7 @@ All icons are in assets/icons and are svg files with dash separated words. If yo
 
 We strongly recommend [Visual Studio Code](https://code.visualstudio.com/) and use [fractal-vscode-extension](https://marketplace.visualstudio.com/items?itemName=carloslfu.fractal-vscode-extension) that provide many useful code snippets
 
-## Test and coverage included (Broken for now ... Comming soon)
-
-Run `npm test` to run test and coverage tasks, and `npm run test:watch` if you are develping for testing every time you make a change.
-
-In FractalBlocks we love quality for this reason the minimum coverage is 100%, we encourage you to do the same
-
-## Testing (Broken for now ... Comming soon)
-
-We believe in that well crafted apps have good quality and should have 100% coverage. Here some tips for writing good tests:
-
-- Each test should be completely isolated
-- Ask you what are you testing?, the test should be focused
-- Ask you what is the behaviour? the test should be clear
-- Ask you what is the expected result?
-- Ask you what is the actual result?
-- The test should be useful as documentation
-- A failing test should be like a high quiality error report
-
-## E2E testing
-
-We recomend to have e2e tests for each acceptance criteria (of a user story). E2e test always shoul import the module, e.g. `app/index.ts` as a start point. Here some tips:
-
-- The e2e tests always should assert that there are no warning and errors via logs
-
-## Unit testing
-
-We recomend to have unit tests for each component in a file called `componentName.spec.ts`. You should test actions and inputs as you can see in `app/root.spec.ts` example.
-
 ## TODOs
 
-- Add e2e test for the unique acceptance criteria
+- Integrate testing suite
+- Integrate Code coverage
