@@ -11,11 +11,11 @@ if (!process.env.isProduction) {
       if (data.type === 'js') {
           FuseBox.flush()
           FuseBox.dynamic(data.path, data.content)
-          let newMod = FuseBox.import(data.path)
-          if (FuseBox.mainFile && newMod.name && newMod.hasOwnProperty('state') && newMod.interfaces) {
+          if (FuseBox.mainFile && data.path.slice(0, 4) === 'Root') {
             let Root = FuseBox.import('./Root')
             ;(window as any).app.moduleAPI.reattach(Root, mergeStates)
           } else if (FuseBox.mainFile) {
+            ;(window as any).app.moduleAPI.dispose()
             FuseBox.import(FuseBox.mainFile)
           }
           return true
