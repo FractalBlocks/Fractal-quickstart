@@ -1,6 +1,3 @@
-[![codecov](https://codecov.io/gh/FractalBlocks/Fractal-quickstart/branch/master/graph/badge.svg)](https://codecov.io/gh/FractalBlocks/Fractal-quickstart)
-[![Build Status](https://travis-ci.org/FractalBlocks/Fractal-quickstart.svg?branch=master)](https://travis-ci.org/FractalBlocks/Fractal-quickstart)
-[![Join the chat at https://gitter.im/Fractal-core/Lobby](https://badges.gitter.im/Fractal-core/Lobby.svg)](https://gitter.im/Fractal-core/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 # Fractal-quickstart
 
 Super simple quickstart project for Fractal framework. Now we use :fire:[FuseBox](https://github.com/fuse-box/fuse-box):fire:! as bundle/loader system, which allows a blazingly fast develelopment and production building. All this offer a super simple development and production environment, you can count de dev + prod dependencies of this repo in one hand!! there are only 4, see package.json
