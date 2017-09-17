@@ -9,16 +9,21 @@ import { View, h } from 'fractal-core/interfaces/view'
 
 export const name = 'Root'
 
-export const state = false
+export const state = {
+  active: false,
+}
 
-export type S = boolean
+export type S = typeof state
 
-export const inputs: Inputs<S> = ({ ctx }) => ({
+export const inputs: Inputs<S> = ({}) => ({
   toggle: async () => actions.Toggle(),
 })
 
 export const actions: Actions<S> = {
-  Toggle: () => s => !s,
+  Toggle: () => s => {
+    s.active = !s.active
+    return s
+  },
 }
 
 const view: View<S> = ({ ctx, ev }) => s => {
@@ -31,7 +36,7 @@ const view: View<S> = ({ ctx, ev }) => s => {
     h('div', {
       class: {
         [style.button]: true,
-        [style.buttonActive]: s,
+        [style.buttonActive]: s.active,
       },
       on: {
         click: ev('toggle'),
