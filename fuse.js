@@ -58,7 +58,7 @@ Sparky.task('config', () => {
 })
 
 // main task
-Sparky.task('default', ['clean', 'clean-cache', 'config'], () => {
+Sparky.task('default', ['clean', 'config'], () => {
   fuse.dev({ port: 3000 }, setupServer)
   app.watch().hmr()
   return fuse.run()
