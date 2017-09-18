@@ -6,7 +6,6 @@ const {
   JSONPlugin,
   WebIndexPlugin,
   Sparky,
-  UglifyJSPlugin,
   QuantumPlugin,
   EnvPlugin
 } = require('fuse-box')
