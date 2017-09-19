@@ -4,6 +4,8 @@ Super simple quickstart project for Fractal framework. Now we use :fire:[FuseBox
 
 If you are looking for a fully featured solution with prerendering, SSR and i18n you should use [Fractal-featured](https://github.com/FractalBlocks/Fractal-quickstart/Fractal-featured)
 
+Try this in [Glitch](https://glitch.com/edit/#!/tree-tank)
+
 So you are here, this how you can use this repo:
 
 - [download this repo](https://github.com/FractalBlocks/Fractal-quickstart/archive/master.zip)
