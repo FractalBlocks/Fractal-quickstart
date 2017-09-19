@@ -41,7 +41,7 @@ const view: View<S> = ({ ctx, ev }) => s => {
       on: {
         click: ev('toggle'),
       },
-    }, s ? 'nice!! :\')' : 'Click me!!'),
+    }, s.active ? 'nice!! :\')' : 'Click me!!'),
   ])
 }
 
