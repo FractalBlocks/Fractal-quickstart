@@ -1,8 +1,0 @@
-{
-  "name": "fractal-framework",
-  "dependencies": {},
-  "globalDependencies": {
-    "jasmine": "registry:dt/jasmine#2.5.2+20170315065549",
-    "webpack-env": "registry:dt/webpack-env#1.13.0+20170105061735"
-  }
-}
