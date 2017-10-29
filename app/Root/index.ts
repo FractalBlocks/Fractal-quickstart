@@ -7,16 +7,16 @@ import {
 } from 'fractal-core'
 import { View, h } from 'fractal-core/interfaces/view'
 
-export const name = 'Root'
-
 export const state = {
   active: false,
 }
 
 export type S = typeof state
 
-export const inputs: Inputs<S> = ({}) => ({
-  toggle: async () => actions.Toggle(),
+export const inputs: Inputs = F => ({
+  toggle: async () => {
+    await F.toAct('Toggle')
+  },
 })
 
 export const actions: Actions<S> = {
@@ -26,11 +26,11 @@ export const actions: Actions<S> = {
   },
 }
 
-const view: View<S> = ({ ctx, ev }) => s => {
-  let style = ctx.groups.style
+const view: View<S> = F => s => {
+  let style = F.ctx.groups.style
 
   return h('div', {
-    key: ctx.name,
+    key: F.ctx.name,
     class: { [style.base]: true },
   }, [
     h('div', {
@@ -39,7 +39,7 @@ const view: View<S> = ({ ctx, ev }) => s => {
         [style.buttonActive]: s.active,
       },
       on: {
-        click: ev('toggle'),
+        click: F.ev('toggle'),
       },
     }, s.active ? 'nice!! :\')' : 'Click me!!'),
   ])

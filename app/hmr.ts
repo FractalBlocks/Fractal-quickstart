@@ -1,19 +1,19 @@
 import {
-  mergeStates,
+  hotSwap,
 } from 'fractal-core'
 
 declare const FuseBox
 
-if (!process.env.isProduction) {
+if (process.env.ENV === 'development') {
 
   const customizedHMRPlugin = {
-    hmrUpdate: data => {
+    hmrUpdate: async data => {
       if (data.type === 'js') {
           FuseBox.flush()
           FuseBox.dynamic(data.path, data.content)
-          if (FuseBox.mainFile && data.path.slice(0, 4) === 'Root') {
-            let Root = FuseBox.import('./Root')
-            ;(window as any).app.moduleAPI.reattach(Root, mergeStates)
+          if (FuseBox.mainFile && data.path.includes('Root')) {
+            let Root = await import('./Root')
+            ;(window as any).app = await (window as any).app.moduleAPI.attach(Root, (window as any).app, hotSwap)
           } else if (FuseBox.mainFile) {
             ;(window as any).app.moduleAPI.dispose()
             FuseBox.import(FuseBox.mainFile)
@@ -29,4 +29,3 @@ if (!process.env.isProduction) {
   }
 
 }
-

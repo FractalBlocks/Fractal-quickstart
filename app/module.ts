@@ -10,6 +10,8 @@ import { styleHandler } from 'fractal-core/groups/style'
 
 export const runModule: RunModule = (root: Component<any>, DEV: boolean, viewCb?) => run({
   root,
+  log: DEV,
+  record: DEV,
   groups: {
     style: styleHandler('', DEV),
   },

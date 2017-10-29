@@ -15,7 +15,7 @@ const path = require('path')
 const {spawn} = require('child_process')
 
 let fuse, app, vendor
-let isProduction = false
+let ENV = 'development'
 
 const setupServer = server => {
   const app = server.httpServer.app
@@ -29,20 +29,20 @@ Sparky.task('config', () => {
     tsConfig : 'tsconfig.json',
     experimentalFeatures: true,
     useTypescriptCompiler: true,
-    sourceMaps: !isProduction ? { project: true, vendor: true } : false,
-    cache: !isProduction,
+    sourceMaps: ENV === 'development' ? { project: true, vendor: true } : false,
+    cache: ENV === 'development',
     debug: true,
     log: true,
     plugins: [
       SVGPlugin(),
       CSSPlugin(),
       JSONPlugin(),
-      EnvPlugin({ isProduction }),
+      EnvPlugin({ ENV }),
       WebIndexPlugin({
         path: '.',
         template: 'app/index.html',
       }),
-      isProduction && QuantumPlugin({
+      ENV === 'production' && QuantumPlugin({
         treeshake: true,
         uglify: true,
       }),
@@ -74,7 +74,7 @@ Sparky.task('copy-assets', () => {
 })
 
 // prod build
-Sparky.task('set-production-env', () => isProduction = true)
+Sparky.task('set-production-env', () => ENV = 'production')
 Sparky.task('dist', ['clean', 'clean-cache', 'set-production-env', 'config', 'copy-assets'], () => {
   fuse.dev({ port: 3000 }, setupServer)
   return fuse.run()
