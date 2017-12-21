@@ -13,6 +13,7 @@ const {
 const express = require('express')
 const path = require('path')
 const {spawn} = require('child_process')
+const TypeHelper = require('fuse-box-typechecker').TypeHelper
 
 let fuse, app, vendor
 let ENV = 'development'
@@ -60,7 +61,15 @@ Sparky.task('config', () => {
 // main task
 Sparky.task('default', ['clean', 'config', 'copy-assets'], () => {
   fuse.dev({ port: 3000 }, setupServer)
-  app.watch().hmr()
+  let typeHelper = TypeHelper({
+    tsConfig: './tsconfig.json',
+    basePath:'.',
+    name: 'App typechecker',
+  })
+  app.watch().hmr().completed(proc => {
+    console.log(`\x1b[36m%s\x1b[0m`, `client bundled`)
+    typeHelper.runSync()
+  })
   return fuse.run()
 })
 

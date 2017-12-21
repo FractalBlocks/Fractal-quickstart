@@ -35,8 +35,3 @@ All icons are in assets/icons and are svg files with dash separated words. If yo
 ## Development environment
 
 We strongly recommend [Visual Studio Code](https://code.visualstudio.com/) and use [fractal-vscode-extension](https://marketplace.visualstudio.com/items?itemName=carloslfu.fractal-vscode-extension) that provide many useful code snippets
-
-## TODOs
-
-- Integrate testing suite
-- Integrate Code coverage
