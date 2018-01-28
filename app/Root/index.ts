@@ -13,12 +13,6 @@ export const state = {
 
 export type S = typeof state
 
-export const inputs: Inputs = F => ({
-  toggle: async () => {
-    await F.toAct('Toggle')
-  },
-})
-
 export const actions: Actions<S> = {
   Toggle: () => s => {
     s.active = !s.active
@@ -39,7 +33,7 @@ const view: View<S> = F => async s => {
         [style.buttonActive]: s.active,
       },
       on: {
-        click: F.ev('toggle'),
+        click: F.act('toggle'),
       },
     }, s.active ? 'nice!! :\')' : 'Click me!!'),
   ])
