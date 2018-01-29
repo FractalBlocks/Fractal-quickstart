@@ -33,7 +33,7 @@ const view: View<S> = F => async s => {
         [style.buttonActive]: s.active,
       },
       on: {
-        click: F.act('toggle'),
+        click: F.act('Toggle'),
       },
     }, s.active ? 'nice!! :\')' : 'Click me!!'),
   ])
