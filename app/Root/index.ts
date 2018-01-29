@@ -1,6 +1,5 @@
 import {
   Actions,
-  Inputs,
   Interfaces,
   StyleGroup,
   absoluteCenter,
