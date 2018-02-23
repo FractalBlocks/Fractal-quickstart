@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^4.4.5"
+    "fractal-core": "^5.0.10"
   },
   "devDependencies": {
     "fuse-box": "^3.1.0-next.18",
