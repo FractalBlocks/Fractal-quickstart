@@ -8,16 +8,16 @@ Try this in [Glitch](https://glitch.com/edit/#!/tree-tank)
 
 So you are here, this how you can use this repo:
 
-- [download this repo](https://github.com/FractalBlocks/Fractal-quickstart/archive/master.zip)
-- uncompress the downloaded file
-- open the folder
-- be sure you have [Node.js](https://nodejs.org/en/) installed
-- open a command window
-- type `npm i` and hit enter
-- type `npm start` and visit [http://localhost:3000](http://localhost:3000) in your browser
-- lets hack it! :heart:
+- [Download this repo](https://github.com/FractalBlocks/Fractal-quickstart/archive/master.zip)
+- Uncompress the downloaded file
+- Open the folder
+- Be sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com) installed
+- Open a command window
+- Type `yarn i` and hit enter
+- Type `yarn start` and visit [http://localhost:3000](http://localhost:3000) in your browser
+- Lets hack it! :heart:
 
-Finally when you have some work done, type `npm run compile` and hit enter and your app should appear at the dist/ folder. This is it.
+Finally when you have some work done, type `yarn run compile` and hit enter and your app should appear at the dist/ folder. This is it.
 
 Follow our [tutorial here](https://github.com/FractalBlocks/Fractal/blob/master/docs/tutorial/readme.md).
 
