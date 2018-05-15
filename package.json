@@ -1,15 +1,11 @@
 {
   "name": "fractal-quickstart",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Fractal quickstart project, start with the best practices right now! and have fun",
   "main": "index.js",
   "scripts": {
-    "test": "karma start",
-    "test:watch": "karma start --no-single-run --auto-watch",
-    "posttest": "codecov -f coverage/*.json",
     "start": "node fuse",
-    "dist": "node fuse dist",
-    "bundle-icons": "svg-join -s assets/icons/*.svg -o assets -n icons-bundle && svgo --config=svgo.yml assets/icons-bundle.svg assets/icons-bundle.min.svg"
+    "dist": "node fuse dist"
   },
   "repository": {
     "type": "git",
@@ -22,13 +18,11 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^5.1.1"
+    "fractal-core": "^6.0.0"
   },
   "devDependencies": {
-    "fuse-box": "^3.1.3",
+    "fuse-box": "^3.2.2",
     "fuse-box-typechecker": "^2.6.4",
-    "svg-join": "^1.1.1",
-    "svgo": "^0.7.2",
     "tslint": "^5.8.0",
     "typescript": "^2.7.2",
     "uglify-js": "^3.1.1"

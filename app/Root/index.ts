@@ -19,7 +19,7 @@ export const actions: Actions<S> = {
   },
 }
 
-const view: View<S> = F => async s => {
+const view: View<S> = async (s, F) => {
   let style = F.ctx.groups.style
 
   return h('div', {
