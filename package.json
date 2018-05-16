@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/fractalPlatform/Fractal-quickstart#readme",
   "dependencies": {
-    "fractal-core": "^6.0.0"
+    "fractal-core": "^6.0.2",
+    "uglify-es": "^3.3.9"
   },
   "devDependencies": {
     "fuse-box": "^3.2.2",
     "fuse-box-typechecker": "^2.6.4",
     "tslint": "^5.8.0",
-    "typescript": "^2.7.2",
-    "uglify-js": "^3.1.1"
+    "typescript": "^2.7.2"
   }
 }

@@ -404,9 +404,9 @@ commander@^2.12.1:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
 
-commander@~2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+commander@~2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -790,9 +790,9 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-fractal-core@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/fractal-core/-/fractal-core-6.0.0.tgz#a31d1d287ab39e527c890f209e26ce93ea44dec3"
+fractal-core@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/fractal-core/-/fractal-core-6.0.2.tgz#372a947fa636acdf0eb06030e479c4607030cea3"
   dependencies:
     "@types/core-js" "^0.9.43"
     "@types/node" "^8.0.26"
@@ -2333,11 +2333,11 @@ typestyle@^1.5.1:
   dependencies:
     free-style "2.5.1"
 
-uglify-js@^3.1.1:
-  version "3.3.14"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.14.tgz#d3d84d18722ff342fa96029cca71c67367700079"
+uglify-es@^3.3.9:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
   dependencies:
-    commander "~2.14.1"
+    commander "~2.13.0"
     source-map "~0.6.1"
 
 ultron@1.0.x:

@@ -39,13 +39,13 @@ Sparky.task('config', () => {
       CSSPlugin(),
       JSONPlugin(),
       EnvPlugin({ ENV }),
-      WebIndexPlugin({
-        path: '.',
-        template: 'app/index.html',
-      }),
       ENV === 'production' && QuantumPlugin({
         treeshake: true,
         uglify: true,
+      }),
+      WebIndexPlugin({
+        path: '.',
+        template: 'app/index.html',
       }),
     ],
   })
